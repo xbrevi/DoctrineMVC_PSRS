@@ -25,9 +25,12 @@
         <h1><?= $titulo; ?></h1>
     </div>
 
-    <div class="alert alert-<?= $_SESSION['tipo_mensagem']; ?>">
-        <?= $_SESSION['mensagem']; ?>
-    </div>
+    <?php 
+        if(isset($_SESSION['tipo_mensagem'])) {
+            echo '<div class="alert alert-' . $_SESSION['tipo_mensagem'] . '">';
+            echo $_SESSION['mensagem'] . '</div>';
+        }
+    ?>        
     
     <?php
         unset($_SESSION['mensagem']);

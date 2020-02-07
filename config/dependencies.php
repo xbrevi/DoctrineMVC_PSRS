@@ -24,19 +24,11 @@ $containerBuilder->addDefinitions([
             $entity = (new EntityManagerCreator())->getEntityManager()));    
     },
 
-    FormularioLogin::class => function() {
-        return (new FormularioLogin());
-    },
-    
     RealizarLogin::class => function() {
         return (new RealizarLogin(
             $entity = (new EntityManagerCreator())->getEntityManager()));    
     },
 
-    FormularioInsercao::class => function() {
-        return new FormularioInsercao();
-    },
-    
     Persistencia::class => function () {
         return (new Persistencia(
             $entity = (new EntityManagerCreator())->getEntityManager()));    
@@ -46,6 +38,17 @@ $containerBuilder->addDefinitions([
         return (new FormularioEdicao(
             $entity = (new EntityManagerCreator())->getEntityManager()));
     },
+
+    /*
+    FormularioLogin::class => function() {
+        return (new FormularioLogin());
+    },
+
+    FormularioInsercao::class => function() {
+        return new FormularioInsercao();
+    },
+
+    */
     
 ]);
 
