@@ -21,13 +21,12 @@ if (!array_key_exists($caminho, $rotas)) {
 
 session_start();
 
-/*
+
 $RotaDeLogin = stripos($caminho, 'login');
 if (!isset($_SESSION['logado']) && $RotaDeLogin === false) {
     header('Location: /login');
     exit();
 }
-*/
 
 $psr17Factory = new \Nyholm\Psr7\Factory\Psr17Factory();
 $creator = new ServerRequestCreator(
